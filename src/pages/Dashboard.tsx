@@ -2,7 +2,6 @@ import React from 'react';
 import AccountsSummary from '../components/dashboard/AccountsSummary';
 import TransactionsList from '../components/dashboard/TransactionsList';
 import FinancialChart from '../components/dashboard/FinancialChart';
-import QuickAccess from '../components/dashboard/QuickAccess';
 import { accounts, transactions } from '../data/mockData';
 
 const Dashboard: React.FC = () => {
@@ -15,13 +14,8 @@ const Dashboard: React.FC = () => {
         <TransactionsList transactions={transactions} />
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2">
-          <FinancialChart />
-        </div>
-        <div>
-          <QuickAccess />
-        </div>
+      <div>
+        <FinancialChart />
       </div>
     </div>
   );

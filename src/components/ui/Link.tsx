@@ -10,8 +10,8 @@ interface LinkProps {
 
 export const Link: React.FC<LinkProps> = ({ href, children, icon, isActive = false, onClick }) => {
   const baseClasses = "flex items-center px-3 py-2 text-sm font-medium rounded-md group transition-colors duration-150";
-  const activeClasses = "bg-indigo-50 text-indigo-700";
-  const inactiveClasses = "text-gray-600 hover:bg-gray-50 hover:text-gray-900";
+  const activeClasses = "bg-emerald-50 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300";
+  const inactiveClasses = "text-gray-600 dark:text-gray-300 hover:bg-gray-50 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-white";
   
   return (
     <a 
@@ -23,7 +23,7 @@ export const Link: React.FC<LinkProps> = ({ href, children, icon, isActive = fal
       }}
     >
       {icon && (
-        <span className={`mr-3 h-5 w-5 ${isActive ? 'text-indigo-500' : 'text-gray-400 group-hover:text-gray-500'}`}>
+        <span className={`mr-3 h-5 w-5 ${isActive ? 'text-emerald-500 dark:text-emerald-400' : 'text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-300'}`}>
           {icon}
         </span>
       )}
